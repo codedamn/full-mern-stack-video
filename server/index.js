@@ -6,13 +6,13 @@
 
 // E - Express
 
-const express = require('express')
+import express from 'express'
 const app = express()
-const cors = require('cors')
-const mongoose = require('mongoose')
-const User = require('./models/user.model')
-const jwt = require('jsonwebtoken')
-const bcrypt = require('bcryptjs')
+import cors from 'cors'
+import mongoose from 'mongoose'
+import User  from './models/user.model.js'
+import jwt from 'jsonwebtoken'
+import bcrypt from 'bcryptjs'
 
 app.use(cors())
 app.use(express.json())
