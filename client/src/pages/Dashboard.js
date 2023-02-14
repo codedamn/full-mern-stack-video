@@ -57,6 +57,12 @@ const Dashboard = () => {
 			alert(data.error)
 		}
 	}
+	
+	window.addEventListener("storage", function (event) {
+	    if (event.key === "token" && !event.newValue) {
+	      window.location.replace("/login");
+	    }
+	});
 
 	return (
 		<div>
